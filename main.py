@@ -125,6 +125,35 @@ for x in range(2, 6):
     variables_list_3[x].add_rivet_spacing(spacing)
     moment_of_inertia.append(variables_list_3[x].stress_max)
 
+# Moment of Inertia change for stringer number
+n = range(2, 6)
+moment_of_inertia = []
+moment_of_inertia.append(variables_list_3[2].i_x)
+moment_of_inertia.append(variables_list_3[3].i_x)
+moment_of_inertia.append(variables_list_3[4].i_x)
+moment_of_inertia.append(variables_list_3[5].i_x)
+plt.plot(n, moment_of_inertia)
+plt.title('Change of moment of inertia for stringer number')
+plt.xlabel('Stringer number')
+plt.ylabel('Moment of Inertia [m^4]')
+plt.grid(True)
+plt.show()
+
+# Centroid change for stringer number
+n = range(2, 6)
+centroid = []
+centroid.append(variables_list_3[2].centroid)
+centroid.append(variables_list_3[3].centroid)
+centroid.append(variables_list_3[4].centroid)
+centroid.append(variables_list_3[5].centroid)
+plt.plot(n, centroid)
+plt.title('Change of centroid for stringer number')
+plt.xlabel('Stringer number')
+plt.ylabel('Centroid distance to centerline [m]')
+plt.grid(True)
+plt.show()
+
+
 # All the calculations for 1 stringer at the bottom
 for x in range(2, 6):
     bottom_stringers = 1
