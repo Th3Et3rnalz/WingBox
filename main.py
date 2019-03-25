@@ -96,10 +96,10 @@ def calculate_spacing(data_given):
     spacing_bottom = []  # Empty variable that is declared to place data from the calculations into.
     spacing_top = []
     for i in range(0, n-1):
-        s = 81044.8 * math.sqrt(data_given.i_x/ ((0.075 + data_given.centroid) * rivet_load * (1.385 - i*1.385/n)))
+        s = 162088 * math.sqrt(data_given.i_x / ((0.075 + data_given.centroid) * rivet_load * (1.385 - i*1.385/n)))
         spacing_bottom.append(s)
     for i in range(0, n-1):
-        s = 81044.8 * math.sqrt(data_given.i_x / ((0.075 - data_given.centroid) * rivet_load * (1.385 - i * 1.385 / n)))
+        s = 162088 * math.sqrt(data_given.i_x / ((0.075 - data_given.centroid) * rivet_load * (1.385 - i * 1.385 / n)))
         spacing_top.append(s)
     return [spacing_bottom, spacing_top]
 
